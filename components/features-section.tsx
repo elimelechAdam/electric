@@ -44,7 +44,7 @@ export function FeaturesSection() {
                   transition={{ duration: 0.5, delay: idx * 0.1 }}
                   className={
                     "flex flex-col items-start gap-6 p-6 md:p-10" +
-                    (idx > 0 ? " md:border-s md:border-[#e6f4ee]" : "")
+                    (idx > 0 ? " md:border-s md:!border-[#e6f4ee]" : "")
                   }
                 >
                   <div className="relative">
