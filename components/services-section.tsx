@@ -3,7 +3,6 @@
 import { motion } from "framer-motion"
 import { Plug, LampCeiling, Wrench } from "lucide-react"
 import { AnimatedButton } from "./animated-button"
-import Image from "next/image"
 
 const services = [
   {

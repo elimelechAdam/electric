@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
-import { Assistant, Geist_Mono } from "next/font/google";
+import { Assistant } from "next/font/google";
 import "./globals.css";
 import { SiteFooter } from "@/components/site-footer";
+import { BackToTop } from "@/components/back-to-top";
 
 const assistant = Assistant({
   variable: "--font-assistant",
@@ -9,10 +10,6 @@ const assistant = Assistant({
   weight: ["200", "300", "400", "500", "600", "700", "800"]
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
 
 export const metadata: Metadata = {
   title: "MS Electrical Solutions",
@@ -31,6 +28,7 @@ export default function RootLayout({
       >
         {children}
         <SiteFooter />
+        <BackToTop />
       </body>
     </html>
   );

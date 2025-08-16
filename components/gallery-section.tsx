@@ -4,43 +4,32 @@ import { motion } from 'framer-motion'
 import Image from 'next/image'
 import { useState } from 'react'
 import { X, ChevronLeft, ChevronRight } from 'lucide-react'
+import { AnimatedButton } from './animated-button'
 
 const galleryImages = [
   {
     src: '/images/images/project-1-1.jpg',
-    alt: 'תיקון חשמל מקצועי',
-    title: 'תיקון חשמל מקצועי',
-    description: 'תיקון מערכות חשמל מתקדמות'
+    alt: 'חשמלאי עובד על תיבת חשמל חיצונית'
   },
   {
     src: '/images/images/project-1-2.jpg',
-    alt: 'התקנת תאורה',
-    title: 'התקנת תאורה',
-    description: 'התקנת מערכות תאורה מודרניות'
+    alt: 'לוח חשמל עם מפסקי זרם'
   },
   {
     src: '/images/images/project-1-3.jpg',
-    alt: 'תחזוקת חשמל',
-    title: 'תחזוקת חשמל',
-    description: 'תחזוקה שוטפת של מערכות חשמל'
+    alt: 'התקנת רכיב חשמלי'
   },
   {
     src: '/images/images/project-1-4.jpg',
-    alt: 'התקנת מתקנים',
-    title: 'התקנת מתקנים',
-    description: 'התקנת מתקני חשמל חדשים'
+    alt: 'עבודת תחזוקה חשמלית'
   },
   {
     src: '/images/images/project-1-5.jpg',
-    alt: 'בדיקת חשמל',
-    title: 'בדיקת חשמל',
-    description: 'בדיקות בטיחות מקיפות'
+    alt: 'בדיקת בטיחות חשמלית'
   },
   {
     src: '/images/images/project-1-6.jpg',
-    alt: 'שירות חירום',
-    title: 'שירות חירום',
-    description: 'שירותי חירום 24/7'
+    alt: 'שירות חשמל חירום'
   }
 ]
 
@@ -89,21 +78,35 @@ export function GallerySection() {
   }
 
   return (
-    <section id="gallery" className="py-20 bg-gray-50">
+    <section id="gallery" className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            גלריית עבודות
-          </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            צפו בפרויקטים האחרונים שלנו ובדוגמאות לעבודות החשמל המקצועיות שביצענו
-          </p>
+          <div className="flex flex-col md:flex-row md:items-end md:justify-between">
+            <div className="mb-4 md:mb-0">
+              <div className="text-sm font-medium text-[#4CAF50] uppercase tracking-wide mb-2">
+                הגלריה שלנו
+              </div>
+              <h2 className="text-4xl md:text-5xl font-bold text-[#212121] leading-tight">
+                הבחירה הבהירה<br />
+                שלך בתיקונים
+              </h2>
+            </div>
+            <AnimatedButton
+              className="px-6 py-3 rounded-md self-start"
+              baseColor="white"
+              hoverColor="#2aba7f"
+              baseTextColor="#212121"
+              hoverTextColor="white"
+            >
+              כל הגלריה
+            </AnimatedButton>
+          </div>
         </motion.div>
 
         <motion.div
@@ -111,47 +114,50 @@ export function GallerySection() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+          className="grid grid-cols-1 lg:grid-cols-3 gap-6"
         >
-          {galleryImages.map((image, index) => (
-            <motion.div
-              key={index}
-              variants={itemVariants}
-              whileHover={{ 
-                scale: 1.02,
-                transition: { duration: 0.2 }
-              }}
-              className="group cursor-pointer"
-              onClick={() => openModal(index)}
-            >
-              <div className="relative overflow-hidden rounded-2xl shadow-lg bg-white">
-                <div className="aspect-[4/3] relative overflow-hidden">
-                  <Image
-                    src={image.src}
-                    alt={image.alt}
-                    fill
-                    className="object-cover transition-transform duration-500 group-hover:scale-110"
-                  />
-                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-colors duration-300" />
-                  <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <div className="bg-white/90 backdrop-blur-sm rounded-full p-4">
-                      <div className="w-8 h-8 border-2 border-gray-800 rounded-full flex items-center justify-center">
-                        <div className="w-2 h-2 bg-gray-800 rounded-full" />
-                      </div>
-                    </div>
+          <motion.div
+            variants={itemVariants}
+            className="lg:col-span-2 group cursor-pointer"
+            onClick={() => openModal(0)}
+          >
+            <div className="relative overflow-hidden rounded-xl">
+              <div className="aspect-[4/3] relative overflow-hidden">
+                <Image
+                  src={galleryImages[0].src}
+                  alt={galleryImages[0].alt}
+                  fill
+                  className="object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+              </div>
+            </div>
+          </motion.div>
+
+          <div className="space-y-6">
+            {galleryImages.slice(1, 3).map((image, index) => (
+              <motion.div
+                key={index + 1}
+                variants={itemVariants}
+                whileHover={{ 
+                  scale: 1.02,
+                  transition: { duration: 0.2 }
+                }}
+                className="group cursor-pointer"
+                onClick={() => openModal(index + 1)}
+              >
+                <div className="relative overflow-hidden rounded-xl">
+                  <div className="aspect-[4/3] relative overflow-hidden">
+                    <Image
+                      src={image.src}
+                      alt={image.alt}
+                      fill
+                      className="object-cover transition-transform duration-500 group-hover:scale-105"
+                    />
                   </div>
                 </div>
-                <div className="p-6">
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">
-                    {image.title}
-                  </h3>
-                  <p className="text-gray-600">
-                    {image.description}
-                  </p>
-                </div>
-              </div>
-            </motion.div>
-          ))}
+              </motion.div>
+            ))}
+          </div>
         </motion.div>
 
         <motion.div
@@ -159,22 +165,34 @@ export function GallerySection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.3 }}
-          className="text-center mt-16"
+          className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6"
         >
-          <p className="text-lg text-gray-600 mb-8">
-            מעוניינים לראות עוד עבודות או לקבל הצעת מחיר?
-          </p>
-          <motion.button
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="bg-[#2aba7f] text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-[#229a6a] transition-colors"
-          >
-            צרו קשר עכשיו
-          </motion.button>
+          {galleryImages.slice(3, 6).map((image, index) => (
+            <motion.div
+              key={index + 3}
+              variants={itemVariants}
+              whileHover={{ 
+                scale: 1.02,
+                transition: { duration: 0.2 }
+              }}
+              className="group cursor-pointer"
+              onClick={() => openModal(index + 3)}
+            >
+              <div className="relative overflow-hidden rounded-xl">
+                <div className="aspect-[4/3] relative overflow-hidden">
+                  <Image
+                    src={image.src}
+                    alt={image.alt}
+                    fill
+                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                </div>
+              </div>
+            </motion.div>
+          ))}
         </motion.div>
       </div>
 
-      {/* Modal */}
       {selectedImage !== null && (
         <motion.div
           initial={{ opacity: 0 }}
@@ -199,14 +217,6 @@ export function GallerySection() {
                   fill
                   className="object-cover"
                 />
-              </div>
-              <div className="p-8">
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">
-                  {galleryImages[selectedImage].title}
-                </h3>
-                <p className="text-gray-600 text-lg">
-                  {galleryImages[selectedImage].description}
-                </p>
               </div>
             </div>
 
