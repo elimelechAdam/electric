@@ -4,7 +4,7 @@ import { ChevronDown, Zap, Settings, Menu, X, Mail, Phone, Twitter, Facebook, In
 import { motion, AnimatePresence } from 'framer-motion'
 import { useState } from 'react'
 import { AnimatedButton } from './animated-button'
-
+import Image from 'next/image'
 const navVariants = {
   hidden: { opacity: 0, y: -10 },
   visible: {
@@ -78,7 +78,7 @@ export function Navigation() {
         animate="visible"
         className="bg-white/80 backdrop-blur supports-[backdrop-filter]:bg-white/60 sticky top-0 z-50"
       >
-        <div className="max-w-7xl mx-auto px-6 py-5">
+        <div className="max-w-7xl mx-auto px-6">
           <div className="flex items-center justify-between">
             <motion.div 
               variants={logoVariants}
@@ -88,29 +88,9 @@ export function Navigation() {
               }}
               className="flex items-center space-x-3"
             >
-              <motion.div 
-                className="relative"
-                whileHover={{ rotate: 360 }}
-                transition={{ duration: 0.8 }}
-              >
-                <Settings className="w-9 h-9 text-[#2aba7f]" />
-                <motion.div
-                  animate={{ 
-                    scale: [1, 1.2, 1],
-                    rotate: [0, 180, 360]
-                  }}
-                  transition={{ 
-                    duration: 2,
-                    repeat: Infinity,
-                    ease: "easeInOut"
-                  }}
-                >
-                  <Zap className="w-5 h-5 text-[#fedb5d] absolute -top-1 -right-1" />
-                </motion.div>
-              </motion.div>
-              <div className="leading-tight">
-                <div className="text-3xl font-extrabold text-gray-900">MS</div>
-                <div className="text-xs font-semibold tracking-wider text-gray-600">Electrical Solutions</div>
+              
+              <div>
+              <Image src="/images/images/logo.png" alt="logo" width={150} height={150} />
               </div>
             </motion.div>
 
