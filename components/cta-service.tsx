@@ -47,8 +47,7 @@ export function CtaServiceSection() {
               כי הוא זמין 24/7
             </h2>
             <p className="text-[#6b7280] text-lg leading-relaxed mb-10 max-w-xl ml-auto">
-              אנו דוגלים במתן שירות איכותי ומהיר, עם פתרונות אמינים לכל צורך. דוחים הנאות קצרות מועד כדי להבטיח תוצאות טובות ויציבות לאורך זמן.
-            </p>
+            אני דוגל במתן שירות איכותי ומהיר, עם פתרונות אמינים לכל צורך. שם את הדגש על התמדה וסבלנות כדי ליהנות מתוצאות טובות לאורך זמן            </p>
             <div className="flex flex-row-reverse items-center gap-4">
               <AnimatedButton
                 baseColor="#2aba7f"

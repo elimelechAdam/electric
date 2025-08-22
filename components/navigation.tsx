@@ -124,7 +124,7 @@ export function Navigation() {
                 >
                   {l.label}
                   {l.hasDropdown && <ChevronDown size={14} />}
-                  <span className="absolute -bottom-2 left-0 right-0 h-[2px] bg-[#2aba7f] scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-400" />
+                  <span className="absolute -bottom-2 left-0 right-0 h-[2px] bg-[#2aba7f] scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-800" />
                 </motion.a>
               ))}
             </div>

@@ -108,17 +108,17 @@ export function HeroSection() {
               
               <motion.h1 
                 variants={textVariants}
-                className="text-4xl sm:text-5xl lg:text-7xl font-bold text-white leading-[0.95] md:leading-[0.9]"
+                className="text-4xl sm:text-5xl lg:text-[59px] font-bold text-white leading-[0.95] md:leading-[0.9]"
               >
                 <span className="inline-block mb-2">
-                  פתרונות בהירים
+                כל הפתרונות במקום אחד
                   <motion.span 
                     variants={underlineVariants}
                     className="block h-1 bg-[#2aba7f] mt-4 origin-left"
                   />
                 </span>
                 <span className="inline-block">
-                  לבעיות חשוכות
+                חשמל, תיקונים ותחזוקה
                   <motion.span 
                     variants={underlineVariants}
                     className="block h-1 bg-[#2aba7f] mt-4 origin-left"
@@ -130,9 +130,7 @@ export function HeroSection() {
                 variants={textVariants}
                 className="text-gray-300 text-base sm:text-lg md:text-xl leading-relaxed max-w-xl"
               >
-                אנחנו פועלים מעל עשור, מספקים שירותים ברמה הגבוהה ביותר ללקוחותינו. 
-                הצוות המנוסה שלנו מבטיח עבודה איכותית ופתרונות אמינים לכל צרכי החשמל שלכם.
-              </motion.p>
+                אני מציע פתרונות חשמל חכמים ושירותי Handyman לכל בית או משרד, עם מענה מהיר ועבודה מוקפדת עד הפרט האחרון              </motion.p>
             </div>
             
             <AnimatedButton

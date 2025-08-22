@@ -42,7 +42,7 @@ export function AnimatedButton({
       }}
     >
       <span 
-        className="relative z-40 transition-colors duration-500"
+        className="relative z-40 transition-colors duration-1000"
       >
         {children}
       </span>
@@ -57,17 +57,17 @@ export function AnimatedButton({
       `}</style>
       {/* Full background for complete coverage */}
       <div 
-        className="absolute inset-0 w-full h-full transition-opacity duration-800 z-10 opacity-0 group-hover:opacity-100"
+        className="absolute inset-0 w-full h-full transition-opacity duration-1000 z-10 opacity-0 group-hover:opacity-100"
         style={{ backgroundColor: hoverColor }}
       />
       
       {/* Split animation divs for visual effect */}
       <div 
-        className="absolute top-0 left-0 w-full h-[50%] transition-transform duration-800 z-20 -translate-x-[110%] group-hover:translate-x-0"
+        className="absolute top-0 left-0 w-full h-[50%] transition-transform duration-1000 z-20 -translate-x-[110%] group-hover:translate-x-0"
         style={{ backgroundColor: hoverColor }}
       />
       <div 
-        className="absolute bottom-0 left-0 w-full h-[50%] transition-transform duration-800 z-20 translate-x-[110%] group-hover:translate-x-0"
+        className="absolute bottom-0 left-0 w-full h-[50%] transition-transform duration-1000 z-20 translate-x-[110%] group-hover:translate-x-0"
         style={{ backgroundColor: hoverColor }}
       />
       

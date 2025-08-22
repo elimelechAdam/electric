@@ -30,7 +30,7 @@ export function FeaturesSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.6 }}
-          className="rounded-3xl bg-[#F3FBF7] p-8 md:p-12"
+          className="rounded-3xl bg-[#f5fbf9] p-8 md:p-12"
         >
           <div className="grid grid-cols-1 md:grid-cols-3">
             {items.map((item, idx) => {
@@ -48,9 +48,18 @@ export function FeaturesSection() {
                   }
                 >
                   <div className="relative">
-                    <div className="w-16 h-16 rounded-full bg-white shadow-sm ring-1 ring-black/5 flex items-center justify-center">
-                      <Icon className="w-7 h-7 text-[#1f684a]" />
-                    </div>
+                    <motion.div 
+                      whileHover={{ 
+                        scale: 1.1,
+                        transition: { 
+                          duration: 0.8,
+                          ease: [0.25, 0.46, 0.45, 0.94]
+                        }
+                      }}
+                      className="w-16 h-16 rounded-full bg-white hover:bg-[#2aba7e] shadow-sm ring-1 ring-black/5 flex items-center justify-center cursor-pointer transition-colors duration-800 ease-out"
+                    >
+                      <Icon className="w-7 h-7 text-[#1f684a] transition-colors duration-800 ease-out group-hover:text-white" />
+                    </motion.div>
                   </div>
                   <div className="space-y-3">
                     <h3 className="text-xl md:text-2xl font-extrabold text-[#171717]">

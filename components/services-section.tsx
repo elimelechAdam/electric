@@ -1,7 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { Plug, LampCeiling, Wrench } from "lucide-react"
+import { Plug, LampCeiling, Wrench, ArrowLeft } from "lucide-react"
 import { AnimatedButton } from "./animated-button"
 
 const services = [
@@ -9,7 +9,7 @@ const services = [
     icon: Plug,
     type: "סוג שירות 1",
     title: "תיקוני חשמל",
-    desc: "אנו מבצעים תיקונים אמינים ומהירים לכל תקלה חשמלית בבית ובעסק."
+    desc: "אני מבצע תיקונים אמינים ומהירים לכל תקלה חשמלית בבית ובעסק."
   },
   {
     icon: LampCeiling,
@@ -48,11 +48,12 @@ export function ServicesSection() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: i * 0.1 }}
                 whileHover={{ y: -6 }}
-                className="relative rounded-3xl bg-white p-8 md:p-10 shadow-[0_10px_40px_rgba(0,0,0,0.04)] ring-1 ring-[#e9f4ef]"
+                className="relative rounded-3xl bg-white p-8 md:p-10 shadow-[0_10px_40px_rgba(0,0,0,0.04)] ring-1 ring-[#e9f4ef] group"
               >
                 <div className="absolute -top-6 start-6">
-                  <div className="w-20 h-20 rounded-2xl bg-[#f6fbf8] ring-1 ring-[#e6f4ee] flex items-center justify-center">
-                    <Icon className="w-9 h-9 text-[#1f684a]" />
+                  <div className="w-20 h-20 rounded-2xl bg-[#f6fbf8] ring-1 ring-[#e6f4ee] flex items-center justify-center transition-all duration-500 ease-in-out relative overflow-hidden">
+                    <Icon className="w-9 h-9 text-[#1f684a] group-hover:text-white transition-colors duration-500 relative z-10" />
+                    <div className="absolute inset-0 bg-[#2aba7e] transform origin-bottom scale-y-0 group-hover:scale-y-100 transition-transform duration-500 ease-in-out rounded-2xl" />
                   </div>
                 </div>
 
@@ -61,16 +62,10 @@ export function ServicesSection() {
                   <h3 className="text-xl sm:text-2xl md:text-[26px] font-extrabold text-[#171717] mb-4">{s.title}</h3>
                   <p className="text-[#6b7280] leading-relaxed mb-6">{s.desc}</p>
 
-                  <AnimatedButton
-                    baseColor="transparent"
-                    hoverColor="#1f684a"
-                    baseTextColor="#1f684a"
-                    hoverTextColor="white"
-                    className="px-0 py-0 text-sm inline-flex items-center gap-2 bg-transparent"
-                  >
-                    למידע נוסף
-                    <span aria-hidden>↗</span>
-                  </AnimatedButton>
+                  <div className="flex items-center gap-1 cursor-pointer">
+                    <span className="underline text-black font-semibold hover:text-[#2bba7f] transition-colors duration-500">למידע נוסף</span>
+                    <ArrowLeft className="inline-block text-[#2bba7f]" size={16}/>
+                  </div>
                 </div>
               </motion.div>
             )
