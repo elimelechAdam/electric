@@ -150,16 +150,13 @@ export function Navigation() {
                initial="closed"
                animate="open"
                exit="closed"
-               className="fixed right-0 top-0 h-full w-80 max-w-[85vw] bg-[#1e1e1e] z-50 lg:hidden"
+               className="fixed right-0 top-0 h-full w-80 max-w-[85vw] bg-[#f0f0f0] text-black z-50 lg:hidden"
              >
                <div className="flex flex-col h-full">
                  <div className="flex items-center justify-between p-5 border-b !border-gray-300">
                    <div className="flex items-center space-x-3">
-                     <Settings className="w-8 h-8 text-[#2aba7e]" />
-                     <div className="leading-tight">
-                       <div className="text-2xl font-extrabold text-white">MS</div>
-                       <div className="text-xs font-semibold tracking-wider text-gray-300">Electrical Solutions</div>
-                     </div>
+                     <Image src="/images/images/logo.png" alt="logo" width={100} height={100} />
+
                    </div>
                    <motion.button
                      whileHover={{ scale: 1.1 }}
@@ -181,7 +178,7 @@ export function Navigation() {
                          transition={{ delay: index * 0.1 }}
                          href={link.href}
                          onClick={closeMobileMenu}
-                         className="flex items-center justify-between py-4 px-2 text-gray-200 hover:text-[#2aba7e] transition-colors border-b !border-gray-300"
+                         className="flex items-center justify-between py-4 px-2  hover:text-[#2aba7e] transition-colors border-b !border-gray-300"
                        >
                          <span className="font-medium">{link.label}</span>
                          {link && (
@@ -192,13 +189,13 @@ export function Navigation() {
                    </div>
                  <div className=" space-y-6 mt-4 ">
                    <div className="space-y-4">
-                     <div className="flex items-center space-x-3 text-gray-200">
+                     <div className="flex items-center space-x-3 ">
                        <div className="w-8 h-8 bg-[#2aba7e] rounded-full flex items-center justify-center shadow-lg">
                          <Mail size={14} className="text-white" />
                        </div>
                        <span className="text-sm">needhelp@ms-electrical.com</span>
                      </div>
-                     <div className="flex items-center space-x-3 text-gray-200">
+                     <div className="flex items-center space-x-3 ">
                        <div className="w-8 h-8 bg-[#2aba7e] rounded-full flex items-center justify-center shadow-lg">
                          <Phone size={14} className="text-white" />
                        </div>

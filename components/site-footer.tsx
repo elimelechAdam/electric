@@ -2,6 +2,7 @@
 
 import { Facebook, Instagram, Linkedin, Twitter, Settings, Zap } from "lucide-react"
 import { motion } from "framer-motion"
+import Image from "next/image"
 
 export function SiteFooter() {
   return (
@@ -16,14 +17,9 @@ export function SiteFooter() {
         >
           <motion.div className="space-y-5" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.05 }}>
             <div className="flex items-center gap-3 text-white">
-              <div className="relative">
-                <Settings className="w-9 h-9 text-[#2aba7f]" />
-                <Zap className="w-5 h-5 text-[#fedb5d] absolute -top-1 -right-1" />
-              </div>
-              <div className="leading-tight">
-                <div className="text-2xl font-extrabold text-white">MS</div>
-                <div className="text-xs font-semibold tracking-wider text-white/70">Electrical Solutions</div>
-              </div>
+              
+              <Image src="/images/images/logo.png" alt="logo" width={150} height={150} />
+
             </div>
             <p className="leading-relaxed text-white/70">
               לא מחפפים – עושים את העבודה נכון מההתחלה, כדי שתחיו בראש שקט בלי תקלות חוזרות.
