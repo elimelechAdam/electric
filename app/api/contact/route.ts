@@ -45,7 +45,7 @@ export async function POST(request: NextRequest) {
     }
 
     return NextResponse.json({ success: true, data })
-  } catch (error) {
+  } catch {
     return NextResponse.json(
       { error: 'שגיאה בשרת' },
       { status: 500 }

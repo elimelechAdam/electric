@@ -1,5 +1,6 @@
 import { Metadata } from 'next'
 import Image from 'next/image'
+import Link from 'next/link'
 
 export const metadata: Metadata = {
   title: 'מדיניות עוגיות - MS Electrical Solutions',
@@ -76,7 +77,7 @@ export default function CookiePolicyPage() {
             <section className="mb-8">
               <h2 className="text-2xl font-bold text-gray-900 mb-4">הסכמת המשתמש</h2>
               <p className="text-gray-700 leading-relaxed mb-4">
-                בעת השימוש באתר, ובלחיצה על "קבל", אתם מאשרים את השימוש שלנו בעוגיות כפי שמתואר במדיניות זו.
+                בעת השימוש באתר, ובלחיצה על &quot;קבל&quot;, אתם מאשרים את השימוש שלנו בעוגיות כפי שמתואר במדיניות זו.
               </p>
             </section>
 
@@ -89,12 +90,12 @@ export default function CookiePolicyPage() {
           </div>
 
           <div className="text-center mt-12 pt-8 border-t border-gray-200">
-            <a 
+            <Link 
               href="/"
               className="inline-flex items-center px-6 py-3 bg-[#2aba7f] text-white font-semibold rounded-lg hover:bg-[#1f684a] transition-colors"
             >
               חזרה לדף הבית
-            </a>
+            </Link>
           </div>
         </div>
       </div>

@@ -91,7 +91,7 @@ export async function POST(request: NextRequest) {
   }
 }
 
-async function processMessage(message: WhatsAppMessage, phoneNumberId: string) {
+async function processMessage(message: WhatsAppMessage, _phoneNumberId: string) {
   if (message.type !== 'text' || !message.text?.body) return
 
   const userPhone = message.from

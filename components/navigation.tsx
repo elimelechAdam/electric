@@ -1,6 +1,6 @@
 "use client"
 
-import { ChevronDown, Zap, Settings, Menu, X, Mail, Phone, Twitter, Facebook, Instagram, ChevronLeft } from 'lucide-react'
+import { ChevronDown, Menu, X, Mail, Phone, Twitter, Facebook, Instagram, ChevronLeft } from 'lucide-react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { useState } from 'react'
 import { AnimatedButton } from './animated-button'

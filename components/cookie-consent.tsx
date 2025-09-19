@@ -18,10 +18,6 @@ export function CookieConsent() {
     setIsVisible(false)
   }
 
-  const handlePreferences = () => {
-    localStorage.setItem('cookie-consent', 'preferences')
-    setIsVisible(false)
-  }
 
   const handleClose = () => {
     setIsVisible(false)
@@ -45,7 +41,7 @@ export function CookieConsent() {
         
         <p className="mb-6 text-sm text-gray-700 leading-relaxed">
         אנו משתמשים בעוגיות (Cookies) וטכנולוגיות דומות לצורך תפקוד בסיסי של האתר בלבד. איננו שומרים מידע אישי כלשהו על המשתמשים.
-        בלחיצה על "קבל", הינך מאשר/ת זאת, כפי שמפורט ב{' '}
+        בלחיצה על &quot;קבל&quot;, הינך מאשר/ת זאת, כפי שמפורט ב{' '}
           <a href="/cookie-policy" className="text-blue-600 hover:underline">
             מדיניות העוגיות
           </a>

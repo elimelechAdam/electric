@@ -1,6 +1,6 @@
 "use client"
 
-import { Mail, Facebook, Twitter, Linkedin, Instagram, Phone } from 'lucide-react'
+import { Mail, Facebook, Instagram, Phone } from 'lucide-react'
 import { motion } from 'framer-motion'
 
 const containerVariants = {

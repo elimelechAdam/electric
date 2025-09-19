@@ -104,7 +104,7 @@ export class WhatsAppAPI {
             console.error('- Check your Meta Business App permissions')
             console.error('- Verify WhatsApp Business API setup')
           }
-        } catch (e) {
+        } catch {
           // Error text wasn't JSON
         }
         

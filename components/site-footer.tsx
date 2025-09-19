@@ -1,6 +1,6 @@
 "use client"
 
-import { Facebook, Instagram, Linkedin, Twitter, Settings, Zap } from "lucide-react"
+import { Facebook, Instagram } from "lucide-react"
 import { motion } from "framer-motion"
 import Image from "next/image"
 import Link from "next/link"
