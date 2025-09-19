@@ -16,8 +16,8 @@ export default function HomePage() {
       <FeaturesSection />
       <AboutSection />
       <ServicesSection />
-      <CtaServiceSection />
       <GallerySection />
+      <CtaServiceSection />
     </div>
   )
 }

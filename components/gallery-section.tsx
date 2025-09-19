@@ -93,8 +93,8 @@ export function GallerySection() {
                 הגלריה שלנו
               </div>
               <h2 className="text-4xl md:text-5xl font-bold text-[#212121] leading-tight">
-                הבחירה הבהירה<br />
-                שלך בתיקונים
+                הבחירה הנכונה
+                בתיקונים שלך
               </h2>
             </div>
             <AnimatedButton

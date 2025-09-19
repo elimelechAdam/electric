@@ -6,7 +6,7 @@ import { AnimatedButton } from "./animated-button"
 
 export function AboutSection() {
   return (
-    <section className="relative py-16 md:py-24 overflow-hidden">
+    <section id="about" className="relative py-16 md:py-24 overflow-hidden">
 
       <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8 md:gap-12 items-center">
         <div className="grid grid-cols-2 gap-6">

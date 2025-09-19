@@ -3,10 +3,11 @@
 import { Facebook, Instagram, Linkedin, Twitter, Settings, Zap } from "lucide-react"
 import { motion } from "framer-motion"
 import Image from "next/image"
+import Link from "next/link"
 
 export function SiteFooter() {
   return (
-    <footer id="contact" className="bg-[#121212] text-white/80 pt-20">
+    <footer className="bg-[#121212] text-white/80 pt-20">
       <div className="max-w-7xl mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 24 }}
@@ -26,8 +27,6 @@ export function SiteFooter() {
             </p>
             <div className="flex gap-3">
               <a href="#" className="w-9 h-9 rounded-full bg-white/10 hover:bg-white/20 transition grid place-items-center"><Facebook size={16} /></a>
-              <a href="#" className="w-9 h-9 rounded-full bg-white/10 hover:bg-white/20 transition grid place-items-center"><Twitter size={16} /></a>
-              <a href="#" className="w-9 h-9 rounded-full bg-white/10 hover:bg-white/20 transition grid place-items-center"><Linkedin size={16} /></a>
               <a href="#" className="w-9 h-9 rounded-full bg-white/10 hover:bg-white/20 transition grid place-items-center"><Instagram size={16} /></a>
             </div>
           </motion.div>
@@ -57,10 +56,7 @@ export function SiteFooter() {
           <motion.div className="space-y-4" dir="rtl" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.2 }}>
             <div className="text-white font-bold">צרו קשר</div>
             <div className="space-y-3">
-              <div>
-                <div className="text-white/60 text-sm">כתובת</div>
-                <div>רח׳ הדוגמה 10, תל אביב</div>
-              </div>
+              
               <div>
                 <div className="text-white/60 text-sm">טלפון</div>
                 <div>+972 52 555 5555</div>
@@ -74,7 +70,15 @@ export function SiteFooter() {
         </motion.div>
 
         <motion.div className="flex flex-col md:flex-row items-center justify-between gap-4 py-6 text-sm text-white/60" initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
-          <div>© {new Date().getFullYear()} כל הזכויות שמורות</div>
+          <div className="flex justify-between w-full">
+            <div>
+            © {new Date().getFullYear()} כל הזכויות שמורות
+            </div>
+            <div className="flex gap-4">
+              <Link href="/cookie-policy">מדיניות עוגיות</Link>
+              <Link href="/privacy-policy">מדיניות פרטיות</Link>
+            </div>
+          </div>
         </motion.div>
       </div>
     </footer>

@@ -27,7 +27,7 @@ const services = [
 
 export function ServicesSection() {
   return (
-    <section className="relative max-w-7xl mx-auto py-16 md:py-24 overflow-hidden">
+    <section id="services" className="relative max-w-7xl mx-auto py-16 md:py-24 overflow-hidden">
 
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center space-y-3 md:space-y-4 mb-10 md:mb-16">
@@ -62,10 +62,7 @@ export function ServicesSection() {
                   <h3 className="text-xl sm:text-2xl md:text-[26px] font-extrabold text-[#171717] mb-4">{s.title}</h3>
                   <p className="text-[#6b7280] leading-relaxed mb-6">{s.desc}</p>
 
-                  <div className="flex items-center gap-1 cursor-pointer">
-                    <span className="underline text-black font-semibold hover:text-[#2bba7f] transition-colors duration-500">למידע נוסף</span>
-                    <ArrowLeft className="inline-block text-[#2bba7f]" size={16}/>
-                  </div>
+                  
                 </div>
               </motion.div>
             )

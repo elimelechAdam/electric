@@ -58,9 +58,9 @@ const overlayVariants = {
 
 const links = [
   { href: '#home', label: 'בית', hasDropdown: false },
-  { href: '#about', label: 'אודות', hasDropdown: false },
+  { href: '#about', label: 'הכירו אותנו', hasDropdown: false },
   { href: '#features', label: 'יתרונות', hasDropdown: false },
-  { href: '#services', label: 'שירותים', hasDropdown: false },
+  { href: '#services', label: 'השירותים שלנו', hasDropdown: false },
   { href: '#gallery', label: 'גלריה', hasDropdown: false },
   { href: '#contact', label: 'צור קשר', hasDropdown: false },
 ]
@@ -110,22 +110,29 @@ export function Navigation() {
             </div>
 
             <div className="flex items-center space-x-4">
-              <AnimatedButton
-                className="px-9 py-4 rounded-lg hidden md:block"
-                baseColor="#2aba7f"
-                hoverColor="#fedb5d"
-                baseTextColor="white"
-                hoverTextColor="black"
+              <a 
+                href="https://wa.me/972547976535"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hidden md:block"
               >
-                קבל הצעת מחיר
-              </AnimatedButton>
+                <AnimatedButton
+                  className="px-9 py-4 rounded-lg"
+                  baseColor="#2aba7f"
+                  hoverColor="#fedb5d"
+                  baseTextColor="white"
+                  hoverTextColor="black"
+                >
+                  קבל הצעת מחיר
+                </AnimatedButton>
+              </a>
               <motion.button 
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 aria-label="תפריט"
                 aria-expanded={mobileOpen}
                 onClick={() => setMobileOpen((v) => !v)}
-                className="lg:hidden w-11 h-11 bg-gray-50 rounded-full flex items-center justify-center text-gray-600 hover:bg-gray-100 transition-colors border border-gray-200"
+                className="lg:hidden w-11 h-11 bg-gray-50 rounded-full flex items-center justify-center text-gray-600 hover:bg-gray-100 transition-colors border !border-gray-200"
               >
                 {mobileOpen ? <X size={18} /> : <Menu size={18} />}
               </motion.button>
@@ -150,7 +157,7 @@ export function Navigation() {
                initial="closed"
                animate="open"
                exit="closed"
-               className="fixed right-0 top-0 h-full w-80 max-w-[85vw] bg-[#f0f0f0] text-black z-50 lg:hidden"
+               className="fixed right-0 top-0 h-full w-80 max-w-[85vw] bg-[#ffffff] text-black z-50 lg:hidden"
              >
                <div className="flex flex-col h-full">
                  <div className="flex items-center justify-between p-5 border-b !border-gray-300">
@@ -185,10 +192,28 @@ export function Navigation() {
                            <ChevronLeft size={32} className="bg-[#2aba7e] p-2" />
                          )}
                        </motion.a>
-                     ))}
-                   </div>
-                 <div className=" space-y-6 mt-4 ">
-                   <div className="space-y-4">
+                    ))}
+                  </div>
+                  <div className="px-5 mt-6">
+                    <a 
+                      href="https://wa.me/972547976535"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="block"
+                    >
+                      <AnimatedButton
+                        className="w-full px-9 py-4 rounded-lg"
+                        baseColor="#2aba7f"
+                        hoverColor="#fedb5d"
+                        baseTextColor="white"
+                        hoverTextColor="black"
+                      >
+                        קבל הצעת מחיר
+                      </AnimatedButton>
+                    </a>
+                  </div>
+                <div className=" space-y-6 mt-4 ">
+                  <div className="space-y-4">
                      <div className="flex items-center space-x-3 ">
                        <div className="w-8 h-8 bg-[#2aba7e] rounded-full flex items-center justify-center shadow-lg">
                          <Mail size={14} className="text-white" />

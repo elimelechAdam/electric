@@ -3,6 +3,7 @@ import { Assistant } from "next/font/google";
 import "./globals.css";
 import { SiteFooter } from "@/components/site-footer";
 import { BackToTop } from "@/components/back-to-top";
+import { CookieConsent } from "@/components/cookie-consent";
 
 const assistant = Assistant({
   variable: "--font-assistant",
@@ -13,7 +14,7 @@ const assistant = Assistant({
 
 export const metadata: Metadata = {
   title: "MS Electrical Solutions",
-  description: "שירותי תיקון חשמל מקצועיים עם יותר מעשור של ניסיון. עבודה איכותית ופתרונות אמינים לכל צרכי החשמל שלכם.",
+  description: "אני מציע פתרונות חשמל חכמים ושירותי Handyman לכל בית או משרד, עם מענה מהיר ועבודה מוקפדת עד הפרט האחרון",
 };
 
 export default function RootLayout({
@@ -29,6 +30,7 @@ export default function RootLayout({
         {children}
         <SiteFooter />
         <BackToTop />
+        <CookieConsent />
       </body>
     </html>
   );

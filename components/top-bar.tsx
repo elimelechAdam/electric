@@ -98,32 +98,6 @@ export function TopBar() {
             href="#" 
             className="w-7 h-7 bg-white/20 rounded-full flex items-center justify-center text-white hover:bg-white/30 transition-colors"
           >
-            <Twitter size={14} />
-          </motion.a>
-          <motion.a 
-            variants={socialVariants}
-            whileHover={{ 
-              scale: 1.2,
-              rotate: 5,
-              transition: { type: "spring", stiffness: 400 }
-            }}
-            whileTap={{ scale: 0.9 }}
-            href="#" 
-            className="w-7 h-7 bg-white/20 rounded-full flex items-center justify-center text-white hover:bg-white/30 transition-colors"
-          >
-            <Linkedin size={14} />
-          </motion.a>
-          <motion.a 
-            variants={socialVariants}
-            whileHover={{ 
-              scale: 1.2,
-              rotate: -5,
-              transition: { type: "spring", stiffness: 400 }
-            }}
-            whileTap={{ scale: 0.9 }}
-            href="#" 
-            className="w-7 h-7 bg-white/20 rounded-full flex items-center justify-center text-white hover:bg-white/30 transition-colors"
-          >
             <Instagram size={14} />
           </motion.a>
         </motion.div>
