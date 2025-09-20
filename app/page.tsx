@@ -1,3 +1,4 @@
+"use client"
 import { TopBar } from '@/components/top-bar'
 import { Navigation } from '@/components/navigation'
 import { FeaturesSection } from '@/components/features-section'
@@ -9,15 +10,18 @@ import { GallerySection } from '@/components/gallery-section'
 
 export default function HomePage() {
   return (
-    <div className="min-h-screen  overflow-x-hidden">
+    <>
       <TopBar />
       <Navigation />
-      <HeroSection />
-      <FeaturesSection />
-      <AboutSection />
-      <ServicesSection />
-      <GallerySection />
-      <CtaServiceSection />
-    </div>
+      <div className="min-h-screen overflow-x-hidden">
+        <HeroSection />
+        <FeaturesSection />
+        <AboutSection />
+        <ServicesSection />
+        <GallerySection />
+        <CtaServiceSection />
+        
+      </div>
+    </>
   )
 }

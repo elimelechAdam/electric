@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion"
 import { Plug, LampCeiling, Wrench } from "lucide-react"
+import Image from "next/image"
 
 const services = [
   {
@@ -26,8 +27,7 @@ const services = [
 
 export function ServicesSection() {
   return (
-    <section id="services" className="relative max-w-7xl mx-auto py-16 md:py-24 overflow-hidden">
-
+    <section id="services" className="relative py-16 md:py-24 overflow-hidden">
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center space-y-3 md:space-y-4 mb-10 md:mb-16">
           <div className="text-[#2aba7f] font-semibold tracking-wider text-sm">השירותים שלנו</div>
@@ -36,7 +36,11 @@ export function ServicesSection() {
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 w-full" >
+          <motion.div className="absolute top-0 left-0 -z-50">
+            <Image src="/images/images/shape-2.png" alt="services" width={1100} height={700} className="w-full h-auto transition-transform duration-700 group-hover:scale-105 invert-[9%]" />
+          </motion.div>
+
           {services.map((s, i) => {
             const Icon = s.icon
             return (

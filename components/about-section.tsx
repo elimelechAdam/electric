@@ -6,10 +6,13 @@ import { AnimatedButton } from "./animated-button"
 
 export function AboutSection() {
   return (
-    <section id="about" className="relative py-16 md:py-24 overflow-hidden">
-
-      <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8 md:gap-12 items-center">
+    <section id="about" className="max-w-7xl mx-auto py-16 md:py-24 overflow-hidden relative">
+      <div className="px-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8 md:gap-12 items-center">
+        <motion.div className="absolute top-0 right-0 -z-50">
+          <Image src="/images/images/shape.png" alt="services" width={950} height={400} className="w-full h-auto transition-transform duration-700 group-hover:scale-105 " />
+        </motion.div>
         <div className="grid grid-cols-2 gap-6">
+          
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}

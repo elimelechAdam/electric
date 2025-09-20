@@ -2,7 +2,7 @@
 
 import { ChevronDown, Menu, X, Mail, Phone, Twitter, Facebook, Instagram, ChevronLeft } from 'lucide-react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { AnimatedButton } from './animated-button'
 import Image from 'next/image'
 const navVariants = {
@@ -67,16 +67,31 @@ const links = [
 
 export function Navigation() {
   const [mobileOpen, setMobileOpen] = useState(false)
+  const [scrolled, setScrolled] = useState(false)
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 20)
+    }
+    window.addEventListener("scroll", handleScroll)
+    return () => {
+      window.removeEventListener("scroll", handleScroll)
+    }
+  }, [])
 
   const closeMobileMenu = () => setMobileOpen(false)
 
   return (
     <>
-      <motion.nav 
+      <motion.nav
         variants={navVariants}
         initial="hidden"
         animate="visible"
-        className="bg-white/80 backdrop-blur supports-[backdrop-filter]:bg-white/60 sticky top-0 z-50"
+        className={`sticky top-0 z-50 transition-all duration-300 ${
+          scrolled
+            ? "bg-white/80 backdrop-blur supports-[backdrop-filter]:bg-white/60 shadow-md"
+            : "bg-transparent"
+        }`}
       >
         <div className="max-w-7xl mx-auto px-6">
           <div className="flex items-center justify-between">

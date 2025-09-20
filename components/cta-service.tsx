@@ -2,17 +2,21 @@
 
 import { motion } from "framer-motion"
 import { ContactForm } from "./contact-form"
+import Image from "next/image"
 
 export function CtaServiceSection() {
   return (
-    <section id="contact" className="pb-10">
-      <div className="max-w-7xl mx-auto px-4">
+    <section id="contact" className="pb-10 relative ">
+      <motion.div className="absolute bottom-0 right-0 -z-50">
+        <Image src="/images/images/shape-3.png" alt="contact" width={600} height={700} className="w-full h-auto transition-transform duration-700 group-hover:scale-105 invert-[5%] " />
+      </motion.div>
+      <div className="px-4  max-w-7xl mx-auto ">
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.6 }}
-          className="grid grid-cols-1 lg:grid-cols-2 gap-10  bg-[#171717] rounded p-9"
+          className="grid grid-cols-1 lg:grid-cols-2 gap-10  bg-[#171717] rounded p-9 z-50"
         >
           <motion.div
             initial={{ opacity: 0, scale: 0.98 }}
@@ -35,26 +39,7 @@ export function CtaServiceSection() {
             </h2>
             <p className=" text-lg leading-relaxed  max-w-xl ml-auto">
             אני דוגל במתן שירות איכותי ומהיר, עם פתרונות אמינים לכל צורך. שם את הדגש על התמדה וסבלנות כדי ליהנות מתוצאות טובות לאורך זמן            </p>
-            <div className="flex flex-row-reverse items-center gap-4">
-              {/* <AnimatedButton
-                baseColor="#2aba7f"
-                hoverColor="#fedb5d"
-                baseTextColor="white"
-                hoverTextColor="black"
-                className="px-7 py-3 rounded-xl font-bold shadow-[0_10px_30px_rgba(42,186,127,0.35)]"
-              >
-                גלו עוד
-              </AnimatedButton>
-              <AnimatedButton
-                baseColor="white"
-                hoverColor="#2aba7f"
-                baseTextColor="#1f684a"
-                hoverTextColor="white"
-                className="px-7 py-3 rounded-xl shadow-[0_10px_30px_rgba(42,186,127,0.35)] font-bold"
-              >
-                הצעת מחיר
-              </AnimatedButton> */}
-            </div>
+            
           </motion.div>
           </motion.div>
 
