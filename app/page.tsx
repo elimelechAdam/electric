@@ -21,8 +21,7 @@ export default function HomePage() {
         <ServicesSection />
         <GallerySection />
         <CtaServiceSection />
-        <Script nl_pos = "bl"></Script>
-        <Script src="https://www.mses.co.il/public/nagishli.js?v=2.3" charSet="utf-8" defer></Script>
+        <Script src="https://www.mses.co.il/nagishli.js?v=2.3" charSet="utf-8" defer></Script>
 
       </div>
     </>
