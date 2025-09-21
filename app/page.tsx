@@ -7,6 +7,7 @@ import { ServicesSection } from '@/components/services-section'
 import { HeroSection } from '@/components/hero-section'
 import { CtaServiceSection } from '@/components/cta-service'
 import { GallerySection } from '@/components/gallery-section'
+import Script from 'next/script'
 
 export default function HomePage() {
   return (
@@ -20,7 +21,9 @@ export default function HomePage() {
         <ServicesSection />
         <GallerySection />
         <CtaServiceSection />
-        
+        <Script nl_pos = "bl"></Script>
+        <Script src="https://www.mses.co.il/public/nagishli.js?v=2.3" charSet="utf-8" defer></Script>
+
       </div>
     </>
   )

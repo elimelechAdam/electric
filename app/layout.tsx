@@ -33,6 +33,7 @@ export default function RootLayout({
         <SiteFooter />
         <BackToTop />
         <CookieConsent />
+        
       </body>
     </html>
   );
