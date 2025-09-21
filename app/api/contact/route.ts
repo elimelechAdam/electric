@@ -1,7 +1,9 @@
 import { Resend } from 'resend'
 import { NextRequest, NextResponse } from 'next/server'
+import { ContactEmail } from '@/components/contact-email'
+import { render } from '@react-email/render'
 
-const resend = new Resend('re_SMsYopef_KKQygVeAvZ9pAL6aFDqMsoHz')
+const resend = new Resend(process.env.RESEND_TOKEN)
 
 export async function POST(request: NextRequest) {
   try {
@@ -14,30 +16,25 @@ export async function POST(request: NextRequest) {
       )
     }
 
+    const emailHtml = await render(
+      ContactEmail({
+        name,
+        email,
+        mobile,
+        company,
+        message,
+      })
+    )
+
     const { data, error } = await resend.emails.send({
-      from: 'MS Electrical Solutions <noreply@yourdomain.com>',
-      to: ['nikoniko0@walla.co.il'],
+      from: 'onboarding@resend.dev',
+      to: ['nikolaisaar@gmail.com'],
       subject: `פנייה חדשה מ-${name}`,
-      html: `
-        <div dir="rtl" style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
-          <h2 style="color: #2aba7f;">פנייה חדשה מהאתר</h2>
-          <div style="background-color: #f9f9f9; padding: 20px; border-radius: 8px; margin: 20px 0;">
-            <p><strong>שם:</strong> ${name}</p>
-            <p><strong>אימייל:</strong> ${email}</p>
-            <p><strong>טלפון:</strong> ${mobile}</p>
-            <p><strong>חברה:</strong> ${company || 'לא צוין'}</p>
-            <p><strong>הודעה:</strong></p>
-            <div style="background-color: white; padding: 15px; border-radius: 4px; margin-top: 10px;">
-              ${message.replace(/\n/g, '<br>')}
-            </div>
-          </div>
-          <p style="color: #666; font-size: 14px;">נשלח מ-${email}</p>
-        </div>
-      `,
+      html: emailHtml,
     })
 
     if (error) {
-        console.log(error)
+      console.error({ message: 'Error sending email', error })
       return NextResponse.json(
         { error: 'שגיאה בשליחת ההודעה' },
         { status: 500 }
@@ -45,10 +42,8 @@ export async function POST(request: NextRequest) {
     }
 
     return NextResponse.json({ success: true, data })
-  } catch {
-    return NextResponse.json(
-      { error: 'שגיאה בשרת' },
-      { status: 500 }
-    )
+  } catch (err) {
+    console.error({ message: 'Error in POST /api/contact', error: err })
+    return NextResponse.json({ error: 'שגיאה בשרת' }, { status: 500 })
   }
 }

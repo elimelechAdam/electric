@@ -21,7 +21,7 @@ export default function HomePage() {
         <ServicesSection />
         <GallerySection />
         <CtaServiceSection />
-        <Script src="https://www.mses.co.il/nagishli.js?v=2.3" charSet="utf-8" defer></Script>
+        <Script src="/nagishli.js?v=2.3" charSet="utf-8" defer></Script>
 
       </div>
     </>
