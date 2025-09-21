@@ -1,10 +1,11 @@
 "use client"
 
-import { ChevronDown, Menu, X, Mail, Phone, Twitter, Facebook, Instagram, ChevronLeft } from 'lucide-react'
+import { ChevronDown, Menu, X, Mail, Phone, ChevronLeft, Facebook, Instagram } from 'lucide-react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { useState, useEffect } from 'react'
 import { AnimatedButton } from './animated-button'
 import Image from 'next/image'
+import type { Variants } from 'framer-motion'
 const navVariants = {
   hidden: { opacity: 0, y: -10 },
   visible: {
@@ -18,7 +19,6 @@ const navVariants = {
   }
 }
 
-import type { Variants } from 'framer-motion'
 const logoVariants: Variants = {
   hidden: { opacity: 0, x: -30 },
   visible: { 
@@ -58,8 +58,8 @@ const overlayVariants = {
 
 const links = [
   { href: '#home', label: 'בית', hasDropdown: false },
-  { href: '#about', label: 'הכירו אותנו', hasDropdown: false },
   { href: '#features', label: 'יתרונות', hasDropdown: false },
+  { href: '#about', label: 'הכירו אותנו', hasDropdown: false },
   { href: '#services', label: 'השירותים שלנו', hasDropdown: false },
   { href: '#gallery', label: 'גלריה', hasDropdown: false },
   { href: '#contact', label: 'צור קשר', hasDropdown: false },
@@ -96,10 +96,9 @@ export function Navigation() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="flex items-center justify-between">
             <motion.div 
-              variants={logoVariants}
               whileHover={{ 
                 scale: 1.05,
-                transition: { type: "spring", stiffness: 800 }
+                transition: { type: "spring", stiffness: 200 }
               }}
               className="flex items-center space-x-3"
             >
@@ -243,20 +242,13 @@ export function Navigation() {
                      </div>
                    </div>
 
-                   <div className="flex space-x-4">
+                   <div className="flex space-x-4 items-center justify-center">
+                     
                      <motion.a
                        whileHover={{ scale: 1.1 }}
                        whileTap={{ scale: 0.9 }}
                        href="#"
-                       className="w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center text-gray-300 hover:bg-[#2aba7e] hover:text-white transition-all duration-300 shadow-lg"
-                     >
-                       <Twitter size={16} />
-                     </motion.a>
-                     <motion.a
-                       whileHover={{ scale: 1.1 }}
-                       whileTap={{ scale: 0.9 }}
-                       href="#"
-                       className="w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center text-gray-300 hover:bg-[#2aba7e] hover:text-white transition-all duration-300 shadow-lg"
+                       className="w-10 h-10 bg-gray-50  border !border-gray-200 rounded-full flex items-center justify-center text-gray-500 hover:bg-[#2aba7e] hover:text-white transition-all duration-300 shadow-lg"
                      >
                        <Facebook size={16} />
                      </motion.a>
@@ -264,7 +256,7 @@ export function Navigation() {
                        whileHover={{ scale: 1.1 }}
                        whileTap={{ scale: 0.9 }}
                        href="#"
-                       className="w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center text-gray-300 hover:bg-[#2aba7e] hover:text-white transition-all duration-300 shadow-lg"
+                       className="w-10 h-10 bg-gray-50  border !border-gray-200 rounded-full flex items-center justify-center text-gray-500 hover:bg-[#2aba7e] hover:text-white transition-all duration-300 shadow-lg"
                      >
                        <Instagram size={16} />
                      </motion.a>

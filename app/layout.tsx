@@ -4,6 +4,7 @@ import "./globals.css";
 import { SiteFooter } from "@/components/site-footer";
 import { BackToTop } from "@/components/back-to-top";
 import { CookieConsent } from "@/components/cookie-consent";
+import { Analytics } from "@vercel/analytics/next";
 
 const assistant = Assistant({
   variable: "--font-assistant",
@@ -28,6 +29,7 @@ export default function RootLayout({
         className={`${assistant.variable} antialiased font-assistant`}
       >
         {children}
+        <Analytics />
         <SiteFooter />
         <BackToTop />
         <CookieConsent />

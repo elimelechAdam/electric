@@ -40,7 +40,7 @@ export function TopBar() {
       animate="visible"
       className="bg-[#1f684a] text-white py-3 "
     >
-      <div className="max-w-7xl mx-auto px-6 flex flex-col sm:flex-row sm:justify-between sm:items-center gap-3 text-sm ">
+      <div className="max-w-7xl mx-auto px-6 flex justify-between  sm:items-center gap-3 text-sm ">
         <div className="flex items-center space-x-4 sm:space-x-8">
           <motion.div 
             variants={itemVariants}

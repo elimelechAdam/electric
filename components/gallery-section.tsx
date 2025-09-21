@@ -97,15 +97,7 @@ export function GallerySection() {
                 בתיקונים שלך
               </h2>
             </div>
-            <AnimatedButton
-              className="px-6 py-3 rounded-md self-start"
-              baseColor="white"
-              hoverColor="#2aba7f"
-              baseTextColor="#212121"
-              hoverTextColor="white"
-            >
-              כל הגלריה
-            </AnimatedButton>
+            
           </div>
         </motion.div>
 
@@ -119,7 +111,6 @@ export function GallerySection() {
           <motion.div
             variants={itemVariants}
             className="lg:col-span-2 group cursor-pointer"
-            onClick={() => openModal(0)}
           >
             <div className="relative overflow-hidden rounded-xl">
               <div className="aspect-[4/3] relative overflow-hidden">
@@ -143,7 +134,6 @@ export function GallerySection() {
                   transition: { duration: 0.2 }
                 }}
                 className="group cursor-pointer"
-                onClick={() => openModal(index + 1)}
               >
                 <div className="relative overflow-hidden rounded-xl">
                   <div className="aspect-[4/3] relative overflow-hidden">
@@ -176,7 +166,6 @@ export function GallerySection() {
                 transition: { duration: 0.2 }
               }}
               className="group cursor-pointer"
-              onClick={() => openModal(index + 3)}
             >
               <div className="relative overflow-hidden rounded-xl">
                 <div className="aspect-[4/3] relative overflow-hidden">

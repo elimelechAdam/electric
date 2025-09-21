@@ -41,12 +41,11 @@ export function BackToTop() {
           }}
           whileTap={{ scale: 0.95 }}
           onClick={scrollToTop}
-          className="fixed bottom-8 right-0 z-50 w-12 h-32 bg-[#2aba7f] hover:bg-[#1f684a] text-white rounded-l-lg shadow-lg hover:shadow-xl transition-all duration-300 flex flex-col items-center justify-center gap-3 group"
+          className="fixed bottom-8 z-25 right-0  w-12 h-32 bg-[#2aba7f] hover:bg-[#1f684a] text-white rounded-l-lg shadow-lg hover:shadow-xl transition-all duration-300 flex flex-col items-center justify-center gap-3 group"
           aria-label="Go back to top"
         >
           <ChevronUp size={18} className="group-hover:animate-bounce" />
           <div className="writing-mode-vertical text-center">
-            <span className="text-xs font-bold tracking-wider leading-none block">תעלה</span>
             <span className="text-xs font-bold tracking-wider leading-none block">למעלה</span>
           </div>
         </motion.button>

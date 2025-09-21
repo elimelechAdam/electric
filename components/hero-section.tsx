@@ -65,7 +65,7 @@ export function HeroSection() {
   }
 
   return (
-    <div className="relative min-h-[70vh] md:h-[85vh] bg-[#171717] overflow-hidden">
+    <section id="home" className="relative min-h-[70vh] md:h-[85vh] bg-[#171717] overflow-hidden">
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-[#171717]" />
 
@@ -189,6 +189,6 @@ export function HeroSection() {
           ))}
         </div>
       </div>
-    </div>
+    </section>
   )
 }
