@@ -19,18 +19,6 @@ const navVariants = {
   }
 }
 
-const logoVariants: Variants = {
-  hidden: { opacity: 0, x: -30 },
-  visible: { 
-    opacity: 1, 
-    x: 0,
-    transition: {
-      type: "spring",
-      stiffness: 800
-    }
-  }
-}
-
 const menuItemVariants = {
   hidden: { opacity: 0, y: -10 },
   visible: { opacity: 1, y: 0}

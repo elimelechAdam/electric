@@ -34,8 +34,7 @@ export default function RootLayout({
         <SiteFooter />
         <BackToTop />
         <CookieConsent />
-        {/* @ts-ignore */}
-        <Script src="/nagishli.js?v=2.3" nl_pos = "br" charSet="utf-8" defer></Script>
+        <Script src="/nagishli.js?v=2.3" charSet="utf-8" defer></Script>
       </body>
     </html>
   );

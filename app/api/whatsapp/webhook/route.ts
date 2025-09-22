@@ -77,7 +77,7 @@ export async function POST(request: NextRequest) {
         for (const change of entry.changes) {
           if (change.field === 'messages' && change.value.messages) {
             for (const message of change.value.messages) {
-              await processMessage(message, change.value.metadata.phone_number_id)
+              await processMessage(message)
             }
           }
         }
@@ -91,7 +91,7 @@ export async function POST(request: NextRequest) {
   }
 }
 
-async function processMessage(message: WhatsAppMessage, _phoneNumberId: string) {
+async function processMessage(message: WhatsAppMessage) {
   if (message.type !== 'text' || !message.text?.body) return
 
   const userPhone = message.from

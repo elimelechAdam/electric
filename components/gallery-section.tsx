@@ -4,7 +4,6 @@ import { motion } from 'framer-motion'
 import Image from 'next/image'
 import { useState } from 'react'
 import { X, ChevronLeft, ChevronRight } from 'lucide-react'
-import { AnimatedButton } from './animated-button'
 
 const galleryImages = [
   {
@@ -56,10 +55,6 @@ const itemVariants = {
 
 export function GallerySection() {
   const [selectedImage, setSelectedImage] = useState<number | null>(null)
-
-  const openModal = (index: number) => {
-    setSelectedImage(index)
-  }
 
   const closeModal = () => {
     setSelectedImage(null)

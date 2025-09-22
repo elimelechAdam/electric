@@ -62,7 +62,7 @@ export function ContactForm() {
         setSubmitStatus('error')
         setErrorMessage(data.error || 'שגיאה בשליחת ההודעה')
       }
-    } catch (error) {
+    } catch {
       setSubmitStatus('error')
       setErrorMessage('שגיאה בחיבור לשרת')
     } finally {
