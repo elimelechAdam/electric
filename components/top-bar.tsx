@@ -52,7 +52,7 @@ export function TopBar() {
             >
               <Mail size={14} />
             </motion.div>
-            <span className="text-white/90">דוגמה@gmail.com</span>
+            <span className="text-white/90">Max96831@gmail.com</span>
           </motion.div>
           <motion.div 
             variants={itemVariants}
@@ -64,7 +64,7 @@ export function TopBar() {
             >
               <Phone size={14} />
             </motion.div>
-            <span className="text-white/90">052-555-5555</span>
+            <span className="text-white/90">054-391-7607</span>
           </motion.div>
           
          

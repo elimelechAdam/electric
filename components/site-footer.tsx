@@ -6,6 +6,15 @@ import Image from "next/image"
 import Link from "next/link"
 
 export function SiteFooter() {
+
+  const links = [
+    { href: '#features', label: 'יתרונות', hasDropdown: false },
+    { href: '#about', label: 'הכירו אותנו', hasDropdown: false },
+    { href: '#services', label: 'השירותים שלנו', hasDropdown: false },
+    { href: '#gallery', label: 'גלריה', hasDropdown: false },
+    { href: '#contact', label: 'צור קשר', hasDropdown: false },
+  ]
+
   return (
     <footer className="bg-[#121212] text-white/80 pt-20">
       <div className="max-w-7xl mx-auto px-6">
@@ -34,11 +43,10 @@ export function SiteFooter() {
           <motion.div className="space-y-4" dir="rtl" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.1 }}>
             <div className="text-white font-bold">החברה שלנו</div>
             <ul className="space-y-3">
-              <li><a className="hover:text-white" href="#">דף הבית</a></li>
-              <li><a className="hover:text-white" href="#">אודות</a></li>
-              <li><a className="hover:text-white" href="#">שירותים</a></li>
-              <li><a className="hover:text-white" href="#">בלוג</a></li>
-              <li><a className="hover:text-white" href="#">צור קשר</a></li>
+              {links.map((l) => (
+                <li key={l.href}><a className="hover:text-white" href={l.href}>{l.label}</a></li>
+              ))}
+              
             </ul>
           </motion.div>
 
@@ -59,11 +67,11 @@ export function SiteFooter() {
               
               <div>
                 <div className="text-white/60 text-sm">טלפון</div>
-                <div>+972 52 555 5555</div>
+                <div>054-391-7607</div>
               </div>
               <div>
                 <div className="text-white/60 text-sm">אימייל</div>
-                <div>example@gmail.com</div>
+                <div>Max96831@gmail.com</div>
               </div>
             </div>
           </motion.div>

@@ -5,6 +5,7 @@ import { SiteFooter } from "@/components/site-footer";
 import { BackToTop } from "@/components/back-to-top";
 import { CookieConsent } from "@/components/cookie-consent";
 import { Analytics } from "@vercel/analytics/next";
+import Script from "next/script";
 
 const assistant = Assistant({
   variable: "--font-assistant",
@@ -33,7 +34,7 @@ export default function RootLayout({
         <SiteFooter />
         <BackToTop />
         <CookieConsent />
-        
+        <Script src="/nagishli.js?v=2.3" nl_pos = "br" charSet="utf-8" defer></Script>
       </body>
     </html>
   );
