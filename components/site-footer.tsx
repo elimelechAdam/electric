@@ -35,7 +35,7 @@ export function SiteFooter() {
               לא מחפפים – עושים את העבודה נכון מההתחלה, כדי שתחיו בראש שקט בלי תקלות חוזרות.
             </p>
             <div className="flex gap-3">
-              <a href="#" className="w-9 h-9 rounded-full bg-white/10 hover:bg-white/20 transition grid place-items-center"><Facebook size={16} /></a>
+              <a href="https://www.facebook.com/profile.php?id=61580390984717" className="w-9 h-9 rounded-full bg-white/10 hover:bg-white/20 transition grid place-items-center"><Facebook size={16} /></a>
               <a href="#" className="w-9 h-9 rounded-full bg-white/10 hover:bg-white/20 transition grid place-items-center"><Instagram size={16} /></a>
             </div>
           </motion.div>

@@ -82,7 +82,7 @@ export function TopBar() {
               transition: { type: "spring", stiffness: 400 }
             }}
             whileTap={{ scale: 0.9 }}
-            href="#" 
+            href="https://www.facebook.com/profile.php?id=61580390984717" 
             className="w-7 h-7 bg-white/20 rounded-full flex items-center justify-center text-white hover:bg-white/30 transition-colors"
           >
             <Facebook size={14} />

@@ -113,7 +113,7 @@ export function Navigation() {
 
             <div className="flex items-center space-x-4">
               <a 
-                href="https://wa.me/972547976535"
+                href="https://wa.me/972543917607"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hidden md:block"
@@ -198,7 +198,7 @@ export function Navigation() {
                   </div>
                   <div className="px-5 mt-6">
                     <a 
-                      href="https://wa.me/972547976535"
+                      href="https://wa.me/972543917607"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="block"
@@ -220,7 +220,7 @@ export function Navigation() {
                        <div className="w-8 h-8 bg-[#2aba7e] rounded-full flex items-center justify-center shadow-lg">
                          <Mail size={14} className="text-white" />
                        </div>
-                       <span className="text-sm">needhelp@ms-electrical.com</span>
+                       <span className="text-sm">Max96831@gmail.com                       </span>
                      </div>
                      <div className="flex items-center space-x-3 ">
                        <div className="w-8 h-8 bg-[#2aba7e] rounded-full flex items-center justify-center shadow-lg">
@@ -235,7 +235,7 @@ export function Navigation() {
                      <motion.a
                        whileHover={{ scale: 1.1 }}
                        whileTap={{ scale: 0.9 }}
-                       href="#"
+                       href="https://www.facebook.com/profile.php?id=61580390984717"
                        className="w-10 h-10 bg-gray-50  border !border-gray-200 rounded-full flex items-center justify-center text-gray-500 hover:bg-[#2aba7e] hover:text-white transition-all duration-300 shadow-lg"
                      >
                        <Facebook size={16} />
