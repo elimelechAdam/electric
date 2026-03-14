@@ -6,6 +6,7 @@ import { BackToTop } from "@/components/back-to-top";
 import { CookieConsent } from "@/components/cookie-consent";
 import { Analytics } from "@vercel/analytics/next";
 import { StructuredData } from "@/components/structured-data";
+import { DocumentTitle } from "@/components/document-title";
 import Script from "next/script";
 
 const assistant = Assistant({
@@ -52,6 +53,7 @@ export default function RootLayout({
         className={`${assistant.variable} antialiased font-assistant`}
       >
         <StructuredData />
+        <DocumentTitle />
         {children}
         <Analytics />
         <SiteFooter />

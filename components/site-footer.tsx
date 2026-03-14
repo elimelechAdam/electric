@@ -12,7 +12,7 @@ export function SiteFooter() {
     { href: '/#about', label: 'הכירו אותנו', hasDropdown: false },
     { href: '/#services', label: 'השירותים שלנו', hasDropdown: false },
     { href: '/#gallery', label: 'גלריה', hasDropdown: false },
-    { href: '/#faq', label: 'שאלות נפוצות', hasDropdown: false },
+    // { href: '/#faq', label: 'שאלות נפוצות', hasDropdown: false },
     { href: '/#contact', label: 'צור קשר', hasDropdown: false },
   ]
 
