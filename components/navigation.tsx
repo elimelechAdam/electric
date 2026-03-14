@@ -113,7 +113,7 @@ export function Navigation() {
 
             <div className="flex items-center space-x-4">
               <a 
-                href="https://wa.me/972543917607"
+                href="https://wa.me/972535317312"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hidden md:block"

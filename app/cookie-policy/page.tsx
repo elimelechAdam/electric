@@ -3,8 +3,9 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'מדיניות עוגיות - MS Electrical Solutions',
-  description: 'מדיניות העוגיות שלנו - הסבר על השימוש בעוגיות באתר MS Electrical Solutions',
+  title: 'מדיניות עוגיות',
+  description: 'הסבר על השימוש בעוגיות באתר MS Electrical Solutions – שירותי חשמל והנדימן במרכז.',
+  alternates: { canonical: 'https://mses.co.il/cookie-policy' },
 }
 
 export default function CookiePolicyPage() {

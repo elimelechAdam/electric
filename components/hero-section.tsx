@@ -84,7 +84,7 @@ export function HeroSection() {
               transition={{ duration: 0.6 }}
               className="absolute inset-0"
             >
-              <Image src={sliderImages[currentSlide]} alt="hero bg" fill className="object-cover" priority />
+              <Image src={sliderImages[currentSlide]} alt="חשמלאי מקצועי – שירותי חשמל ותחזוקה לבית ולמשרד במרכז וראשון לציון" fill className="object-cover" priority />
             </motion.div>
           </AnimatePresence>
           <div className="absolute inset-0 bg-black/35" />
@@ -130,7 +130,7 @@ export function HeroSection() {
                 variants={textVariants}
                 className="text-gray-300 text-base sm:text-lg md:text-xl leading-relaxed max-w-xl"
               >
-                אני מציע פתרונות חשמל חכמים ושירותי Handyman לכל בית או משרד, עם מענה מהיר ועבודה מוקפדת עד הפרט האחרון              </motion.p>
+                חשמלאי מקצועי והנדימן עד הבית – שירותי חשמל, תיקונים ותחזוקה לבית ולמשרד במרכז, ראשון לציון וחולון. מענה מהיר ועבודה מוקפדת.              </motion.p>
             </div>
             
             <AnimatedButton

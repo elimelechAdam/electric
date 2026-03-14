@@ -3,8 +3,9 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'מדיניות פרטיות - MS Electrical Solutions',
-  description: 'מדיניות הפרטיות שלנו - הסבר על איסוף ושימוש במידע באתר MS Electrical Solutions',
+  title: 'מדיניות פרטיות',
+  description: 'מדיניות הפרטיות של MS Electrical Solutions – איסוף ושימוש במידע. שקיפות מלאה ללקוחותינו.',
+  alternates: { canonical: 'https://mses.co.il/privacy-policy' },
 }
 
 export default function PrivacyPolicyPage() {

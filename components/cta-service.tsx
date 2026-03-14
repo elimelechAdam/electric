@@ -8,7 +8,7 @@ export function CtaServiceSection() {
   return (
     <section id="contact" className="pb-10 relative ">
       <motion.div className="absolute bottom-0 right-0 -z-50">
-        <Image src="/images/images/shape-3.png" alt="contact" width={600} height={700} className="w-full h-auto transition-transform duration-700 group-hover:scale-105 invert-[5%] " />
+        <Image src="/images/images/shape-3.png" alt="" width={600} height={700} role="presentation" className="w-full h-auto transition-transform duration-700 group-hover:scale-105 invert-[5%] " />
       </motion.div>
       <div className="px-4  max-w-7xl mx-auto ">
         <motion.div

@@ -64,7 +64,7 @@ export function TopBar() {
             >
               <Phone size={14} />
             </motion.div>
-            <span className="text-white/90">054-391-7607</span>
+            <span className="text-white/90">053-531-7312</span>
           </motion.div>
           
          

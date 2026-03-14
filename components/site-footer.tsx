@@ -8,11 +8,12 @@ import Link from "next/link"
 export function SiteFooter() {
 
   const links = [
-    { href: '#features', label: 'יתרונות', hasDropdown: false },
-    { href: '#about', label: 'הכירו אותנו', hasDropdown: false },
-    { href: '#services', label: 'השירותים שלנו', hasDropdown: false },
-    { href: '#gallery', label: 'גלריה', hasDropdown: false },
-    { href: '#contact', label: 'צור קשר', hasDropdown: false },
+    { href: '/#features', label: 'יתרונות', hasDropdown: false },
+    { href: '/#about', label: 'הכירו אותנו', hasDropdown: false },
+    { href: '/#services', label: 'השירותים שלנו', hasDropdown: false },
+    { href: '/#gallery', label: 'גלריה', hasDropdown: false },
+    { href: '/#faq', label: 'שאלות נפוצות', hasDropdown: false },
+    { href: '/#contact', label: 'צור קשר', hasDropdown: false },
   ]
 
   return (
@@ -28,7 +29,7 @@ export function SiteFooter() {
           <motion.div className="space-y-5" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.05 }}>
             <div className="flex items-center gap-3 text-white">
               
-              <Image src="/images/images/logo.png" alt="logo" width={150} height={150} />
+              <Image src="/images/images/logo.png" alt="MS Electrical Solutions – חשמלאי והנדימן במרכז וראשון לציון" width={150} height={150} />
 
             </div>
             <p className="leading-relaxed text-white/70">
@@ -44,7 +45,7 @@ export function SiteFooter() {
             <div className="text-white font-bold">החברה שלנו</div>
             <ul className="space-y-3">
               {links.map((l) => (
-                <li key={l.href}><a className="hover:text-white" href={l.href}>{l.label}</a></li>
+                <li key={l.href}><Link className="hover:text-white" href={l.href}>{l.label}</Link></li>
               ))}
               
             </ul>
@@ -53,11 +54,11 @@ export function SiteFooter() {
           <motion.div className="space-y-4" dir="rtl" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.15 }}>
             <div className="text-white font-bold">השירותים שלנו</div>
             <ul className="space-y-3">
-              <li><a className="hover:text-white" href="#">תיקוני חשמל</a></li>
-              <li><a className="hover:text-white" href="#">תאורה ומתקנים</a></li>
-              <li><a className="hover:text-white" href="#">תחזוקה</a></li>
-              <li><a className="hover:text-white" href="#">התקנות</a></li>
-              <li><a className="hover:text-white" href="#">שירות 24/7</a></li>
+              <li><Link className="hover:text-white" href="/#services">תיקוני חשמל</Link></li>
+              <li><Link className="hover:text-white" href="/#services">תאורה ומתקנים</Link></li>
+              <li><Link className="hover:text-white" href="/#services">תחזוקה</Link></li>
+              <li><Link className="hover:text-white" href="/#services">התקנות</Link></li>
+              <li><Link className="hover:text-white" href="/#contact">שירות 24/7</Link></li>
             </ul>
           </motion.div>
 
@@ -67,7 +68,7 @@ export function SiteFooter() {
               
               <div>
                 <div className="text-white/60 text-sm">טלפון</div>
-                <div>054-391-7607</div>
+                <div>053-531-7312</div>
               </div>
               <div>
                 <div className="text-white/60 text-sm">אימייל</div>

@@ -7,21 +7,21 @@ import Image from "next/image"
 const services = [
   {
     icon: Plug,
-    type: "סוג שירות 1",
+    type: "שירותי חשמל לבית ולמשרד",
     title: "תיקוני חשמל",
-    desc: "אני מבצע תיקונים אמינים ומהירים לכל תקלה חשמלית בבית ובעסק."
+    desc: "תיקוני חשמל מהירים ואמינים לכל תקלה בבית ובעסק – חשמלאי מקצועי עד הבית."
   },
   {
     icon: LampCeiling,
-    type: "סוג שירות 2",
+    type: "פתרונות חשמל מתקדמים",
     title: "תאורה ומתקנים",
-    desc: "תכנון והתקנה של פתרונות תאורה מתקדמים וחכמים לכל חלל."
+    desc: "תכנון והתקנה של תאורה ופתרונות חשמל חכמים לכל חלל."
   },
   {
     icon: Wrench,
-    type: "סוג שירות 3",
+    type: "תחזוקת בית ומשרד",
     title: "תחזוקה שוטפת",
-    desc: "חבילות תחזוקה 24/7 לשקט נפשי וזמינות מלאה לכל צורך."
+    desc: "חבילות תחזוקה 24/7 לשקט נפשי וזמינות מלאה – שירות הנדימן והחשמלאי במקום אחד."
   }
 ]
 
@@ -38,7 +38,7 @@ export function ServicesSection() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 w-full" >
           <motion.div className="absolute top-0 left-0 -z-50">
-            <Image src="/images/images/shape-2.png" alt="services" width={1100} height={700} className="w-full h-auto transition-transform duration-700 group-hover:scale-105 invert-[9%]" />
+            <Image src="/images/images/shape-2.png" alt="" width={1100} height={700} role="presentation" className="w-full h-auto transition-transform duration-700 group-hover:scale-105 invert-[9%]" />
           </motion.div>
 
           {services.map((s, i) => {
