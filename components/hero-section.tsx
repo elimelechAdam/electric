@@ -111,7 +111,7 @@ export function HeroSection() {
                 className="text-4xl sm:text-5xl lg:text-[59px] font-bold text-white leading-[0.95] md:leading-[0.9]"
               >
                 <span className="inline-block mb-2">
-                כל הפתרונות במקום אחד
+                כל הפתרונות במקום אחד \n 
                   <motion.span 
                     variants={underlineVariants}
                     className="block h-1 bg-[#2aba7f] mt-4 origin-left"
